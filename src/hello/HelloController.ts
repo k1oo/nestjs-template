@@ -4,7 +4,7 @@ import { Controller, Get } from '@nestjs/common';
 export class HelloController {
   constructor() {}
 
-  @Get('/hello')
+  @Get('/')
   async hello() {
     return 'Hello, world';
   }
