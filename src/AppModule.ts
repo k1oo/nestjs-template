@@ -1,7 +1,7 @@
-import {Module} from "@nestjs/common";
-import {HelloController} from "./hello/HelloController";
+import { Module } from '@nestjs/common';
+import { getMySqlRealTypeOrmModule } from '../lib/entity/getMySqlRealTypeOrmModule';
 
 @Module({
-  controllers: [HelloController]
+  imports: [getMySqlRealTypeOrmModule()],
 })
 export class AppModule {}
