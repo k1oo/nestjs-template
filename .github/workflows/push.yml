@@ -30,16 +30,6 @@ jobs:
       - name: Run tests
         run: yarn test
 
-      - name: Test Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()    # run this step even if previous step failed
-        with:
-          name: test-results
-          path: junit-*.xml
-          fail-on-error: 'false'
-          reporter: jest-junit        # Format of test results
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Stop containers
         if: always()
         run: docker-compose -f "docker-compose.yml" down
