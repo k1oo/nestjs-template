@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"libs/**/*.ts\"",
+    "format": "prettier --write \\\"src/**/*.ts\\\" \\\"libs/entity/test/**/*.ts\\\" \\\"libs/**/*.ts\\\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -18,7 +18,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config libs/entity/test/jest-e2e.json"
   },
   "dependencies": {
     "@js-joda/core": "^5.2.0",
@@ -84,13 +84,5 @@
       "^@app/entity(|/.*)$": "<rootDir>/libs/entity/src/$1",
       "^@app/env(|/.*)$": "<rootDir>/libs/env/src/$1"
     }
-  },
-  "mikro-orm": {
-    "useTsNode": true,
-    "tsConfigPath": "./tsconfig.json",
-    "configPaths": [
-      "./libs/entity/src/config/mikro-orm.config.ts",
-      "./dist/mikro-orm.config.js"
-    ]
   }
 }
