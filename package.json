@@ -77,13 +77,20 @@
     "coverageDirectory": "./coverage",
     "testEnvironment": "node",
     "roots": [
-      "<rootDir>/libs/",
-      "<rootDir>/apps/"
+      "<rootDir>/src/",
+      "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^@libs/entity(|/.*)$": "<rootDir>/libs/src/entity/src/$1",
-      "^@libs/env(|/.*)$": "<rootDir>/libs/src/env/src/$1",
-      "^@app/libs(|/.*)$": "<rootDir>/libs/libs/src/$1"
+      "^@app/entity(|/.*)$": "<rootDir>/libs/entity/src/$1",
+      "^@app/env(|/.*)$": "<rootDir>/libs/env/src/$1"
     }
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "tsConfigPath": "./tsconfig.json",
+    "configPaths": [
+      "./libs/entity/src/config/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
   }
 }

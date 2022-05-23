@@ -1,12 +1,21 @@
 {
   "projects": {
-    "libs": {
+    "entity": {
       "type": "library",
-      "root": "libs/libs",
+      "root": "libs/entity",
       "entryFile": "index",
-      "sourceRoot": "libs/libs/src",
+      "sourceRoot": "libs/entity/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/libs/tsconfig.lib.json"
+        "tsConfigPath": "libs/entity/tsconfig.lib.json"
+      }
+    },
+    "env": {
+      "type": "library",
+      "root": "libs/env",
+      "entryFile": "index",
+      "sourceRoot": "libs/env/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/env/tsconfig.lib.json"
       }
     }
   },
