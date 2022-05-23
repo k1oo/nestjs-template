@@ -1,1 +1,1 @@
-# NestJS + TypeScript + TypeORM Template
+# NestJS + TypeScript + MikroORM Template
